@@ -67,7 +67,7 @@ async fn generate_presigned_url(
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    let region = Region::default();
+    let region = Region::EuWest2;
     let bucket_name = env::var("BUCKET_NAME").expect("BUCKET_NAME not set");
     let provider = ChainProvider::new();
     let credentials = provider.credentials().await.unwrap();
